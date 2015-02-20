@@ -32,3 +32,51 @@ const (
 	EFT_HIDDEN	   = "\x1b[8m"
 
 )
+
+func HttpMethod() string {
+
+	switch {
+		case method == "OPTIONS": {
+			return FG_WHITE
+		}
+		case method == "HEAD": 	  {
+			return BG_MAGENTA
+		}
+		case method == "GET":	  {
+			return BG_BLUE
+		}
+		case method == "PUT": 	  {
+			return BG_YELLOW
+		}
+		case method == "POST": 	  {
+			return BG_CYAN
+		}
+		case method == "DELETE":  {
+			return BG_RED
+		}
+		case method == "PATCH":   {
+			return BG_GREEN
+		}
+		default: {
+			return EFT_RESET
+		}
+	}
+}
+
+func HttpStatus() string {
+
+	switch {
+		case code >= 200 && code <= 299: {
+			return FG_GREEN
+		}
+		case code >= 300 && code <= 399: {
+			return FG_CYAN
+		}
+		case code >= 400 && code <= 499: {
+			return FG_YELLOW
+		}
+		default: {
+			return FG_RED
+		}
+	}
+}
