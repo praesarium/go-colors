@@ -33,7 +33,7 @@ const (
 
 )
 
-func HttpMethod() string {
+func HttpMethod(method string) string {
 
 	switch {
 		case method == "OPTIONS": {
@@ -63,7 +63,7 @@ func HttpMethod() string {
 	}
 }
 
-func HttpStatus() string {
+func HttpStatus(code string) string {
 
 	switch {
 		case code >= 200 && code <= 299: {
