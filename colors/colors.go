@@ -2,6 +2,15 @@ package colors
 
 const (
 
+	// extra effects
+	EFT_RESET 	   = "\x1b[0m"
+	EFT_BRIGHT 	   = "\x1b[1m"
+	EFT_DIM 	   = "\x1b[2m"
+	EFT_UNDERSCORE = "\x1b[4m"
+	EFT_BLINK 	   = "\x1b[5m"
+	EFT_REVERSE	   = "\x1b[7m"
+	EFT_HIDDEN	   = "\x1b[8m"
+
 	// foreground colors
 	FG_BLACK   = "\x1b[30m"
 	FG_RED	   = "\x1b[31m"
@@ -21,15 +30,6 @@ const (
 	BG_MAGENTA = "\x1b[45m"
 	BG_CYAN    = "\x1b[46m"
 	BG_WHITE   = "\x1b[47m"
-
-	// extra effects
-	EFT_RESET 	   = "\x1b[0m"
-	EFT_BRIGHT 	   = "\x1b[1m"
-	EFT_DIM 	   = "\x1b[2m"
-	EFT_UNDERSCORE = "\x1b[4m"
-	EFT_BLINK 	   = "\x1b[5m"
-	EFT_REVERSE	   = "\x1b[7m"
-	EFT_HIDDEN	   = "\x1b[8m"
 
 )
 
@@ -63,7 +63,7 @@ func HttpMethod(method string) string {
 	}
 }
 
-func HttpStatus(code string) string {
+func HttpStatus(code int) string {
 
 	switch {
 		case code >= 200 && code <= 299: {
