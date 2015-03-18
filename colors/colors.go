@@ -3,13 +3,13 @@ package colors
 const (
 
 	// extra effects
-	EFT_RESET 	   = "\x1b[0m"
-	EFT_BRIGHT 	   = "\x1b[1m"
-	EFT_DIM 	   = "\x1b[2m"
-	EFT_UNDERSCORE = "\x1b[4m"
-	EFT_BLINK 	   = "\x1b[5m"
-	EFT_REVERSE	   = "\x1b[7m"
-	EFT_HIDDEN	   = "\x1b[8m"
+	EFT_RESET 	   	= "\x1b[0m"
+	EFT_BRIGHT 	   	= "\x1b[1m"
+	EFT_DIM 	   	= "\x1b[2m"
+	EFT_UNDERSCORE	= "\x1b[4m"
+	EFT_BLINK 	   	= "\x1b[5m"
+	EFT_REVERSE	   	= "\x1b[7m"
+	EFT_HIDDEN	   	= "\x1b[8m"
 
 	// foreground colors
 	FG_BLACK   = "\x1b[30m"
